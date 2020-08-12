@@ -4,28 +4,39 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: '86px',
+        // marginTop: '80px',
         backgroundImage: `url(${'/images/header-background.jpg'})`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        position: 'relative',
+        height: '800px',
     },
     textContainer: {
-        maxWidth: "35%",
-        padding: "70px",
+        maxWidth: "40%",
+        padding: "200px",
         paddingRight: 0
+    },
+    text: {
+        font: '700 3rem/3.5rem "Raleway", sans-serif',
+        color: '#00bfd8',
+    },
+    text1: {
+        font: '700 3rem/3.5rem "Raleway", sans-serif',
+        color: '#393939'
     },
     imageContainer: {
         position: 'absolute',
-        right:  '10%',
+        right:  '15%',
         top: '20%',
     },
     btn: {
-        marginTop: "15px",
-        borderRadius: "20px",
+        marginTop: "20px",
+        borderRadius: "25px",
         backgroundColor: '#00bfd8',
         border: '0.125rem solid #00bfd8',
         color: "white",
+        width: '150px',
+        height: '50px',
         fontSize: '0.8rem',
         '&:hover': {
             backgroundColor: 'white',
@@ -33,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     image: {
-        width: '400px',
+        width: '500px',
     }
 }));
 
@@ -43,8 +54,8 @@ function Header() {
     return (
         <div className={classes.root}>
             <div className={classes.textContainer}>
-                <Typography variant="h2">Lorem Ipsum</Typography>
-                <Typography variant="h3" gutterBottom>dolor sit amet</Typography>
+                <Typography className={classes.text} variant="h1">Lorem Ipsum</Typography>
+                <Typography className={classes.text1} variant="h3" gutterBottom>dolor sit amet</Typography>
                 <Typography variant="body1">Use Evolo to promote your business startup and generate leads for the offered services</Typography>
                 <Button className={classes.btn} variant="contained" size="large">DISCOVER</Button>
             </div>
