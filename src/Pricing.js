@@ -1,140 +1,171 @@
-import React, { Fragment } from 'react';
-import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
+import React from 'react';
+import { Typography, Paper, Grid, Divider, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import Grid from '@material-ui/core/Grid';
-import StarIcon from '@material-ui/icons/StarBorder';
+
 
 const useStyles = makeStyles((theme) => ({
     pricing: {
-        backgroundColor: 'white'
+        marginTop: '50px',
+        marginBottom: '50px'
     },
-    heroContent: {
-        padding: theme.spacing(8, 0, 6),
-    },
-    cardHeader: {
-        textAlign: 'left'
-    },
-    cardPricing: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'baseline',
-        marginBottom: theme.spacing(2),
-    },
-    mainTitle: {
+    title: {
         font: '700 2.25rem/2.75rem "Raleway", sans-serif',
         color: '#393939',
+        textAlign: 'center'
+    },
+    text: {
+        width: '65%',
+        textAlign: 'center',
+        marginRight: 'auto',
+        marginLeft: 'auto',
+        marginBottom: '3.875rem'
+    },
+    control: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        height: '440px'
+    },
+    currency: {
+        color: '#00bfd8',
+        fontSize: '1.5rem',
+        verticalAlign: '56%'
+    },
+    value: {
+        color: '#00bfd8',
+        fontWeight: '700',
+        fontSize: '3.5rem',
+    },
+    cross: {
+        fontWeight: '200',
+        fontSize: '1.5rem',
+        color: '#777b7e',
+        marginRight: '6px',
+        lineHeight: '1.5rem',
+    },
+    tick: {
+        fontWeight: '700',
+        fontSize: '1.2rem',
+        color: '#00bfd8',
+        marginRight: '6px'
+    },
+    listContainer: {
+        textAlign: 'left',
+        marginTop: '1.875rem',
+        marginBottom: '1.625rem'
+    },
+    list: {
+        marginBottom: '0.5rem'
     }
 }));
 
-const tiers = [
-    {
-        title: 'Starter',
-        subheader: 'Just to see what can be achieved',
-        price: '199',
-        description: [
-            'Improve Your Email Marketing',
-            'User And Admin Rights Control',
-            'List Building And Cleaning',
-            'Collected Data Management',
-            'More Planning And Evaluation'
-        ],
-        buttonText: 'Request',
-        buttonVariant: 'outlined',
-    },
-    {
-        title: 'Medium',
-        subheader: 'Very appropriate for the short term',
-        price: '299',
-        description: [
-            'Improve Your Email Marketing',
-            'User And Admin Rights Control',
-            'List Building And Cleaning',
-            'Collected Data Management',
-            'More Planning And Evaluation'
-        ],
-        buttonText: 'Request',
-        buttonVariant: 'contained',
-    },
-    {
-        title: 'Complete',
-        subheader: 'Must have for large companies',
-        price: '399',
-        description: [
-            'Improve Your Email Marketing',
-            'User And Admin Rights Control',
-            'List Building And Cleaning',
-            'Collected Data Management',
-            'More Planning And Evaluation'
-        ],
-        buttonText: 'Request',
-        buttonVariant: 'outlined',
-    },
-];
 
 function Pricing() {
     const classes = useStyles();
 
     return (
         <div className={classes.pricing}>
-            <Fragment>
-                <CssBaseline />
-                <Container maxWidth="sm" component="main" className={classes.heroContent}>
-                    <Typography className={classes.mainTitle} variant="h2" align="center" gutterBottom>
-                        Multiple Pricing Options
-        </Typography>
-                    <Typography variant="body1" color="textSecondary" align="center" component="p">
-                        We've prepared pricing plans for all budgets so you can get started right away. They're great for small companies and large organizations
-        </Typography>
-                </Container>
-                <Container maxWidth="md" component="main">
-                    <Grid container spacing={5} alignItems="flex-end">
-                        {tiers.map((tier) => (
-                            // Enterprise card is full width at sm breakpoint
-                            <Grid item key={tier.title} xs={12} sm={6} md={4}>
-                                <Card>
-                                    <CardHeader
-                                        title={tier.title}
-                                        subheader={tier.subheader}
-                                        titleTypographyProps={{ align: 'center' }}
-                                        subheaderTypographyProps={{ align: 'center' }}
-                                        action={tier.title === 'Pro' ? <StarIcon /> : null}
-                                        className={classes.cardHeader}
-                                    />
-                                    <CardContent>
-                                        <div className={classes.cardPricing}>
-                                            <Typography component="h2" variant="h3" color="textPrimary">
-                                                ${tier.price}
-                                            </Typography>
-                                            <Typography variant="h6" color="textSecondary">
-                                                /monthly
-                                        </Typography>
-                                        </div>
-                                        <ul>
-                                            {tier.description.map((line) => (
-                                                <Typography component="li" variant="subtitle1" align="left" key={line}>
-                                                    {line}
-                                                </Typography>
-                                            ))}
-                                        </ul>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button fullWidth variant={tier.buttonVariant} color="primary">
-                                            {tier.buttonText}
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        ))}
+            <Container maxWidth="md">
+                <Typography className={classes.title} variant="h2" color="textPrimary" gutterBottom>Multiple Pricing Options</Typography>
+                <Typography className={classes.text} variant='body1' color="textSecondary" gutterBottom>We've prepared pricing plans for all budgets so you can get started right away. They're great for small companies and large organizations</Typography>
+                <Grid container spacing={5} justify="space-evenly">
+                    <Grid item xs>
+                        <Paper className={classes.control}>
+                            <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
+                                Starter
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" gutterBottom>
+                                Just to see what can be achieved
+                            </Typography>
+                            <Divider variant="middle" />
+                            <span className={classes.currency}>$</span>
+                            <span className={classes.value}>199</span>
+                            <Typography variant="body1" color="textSecondary" gutterBottom>monthly</Typography>
+                            <Divider variant="middle" />
+                            <ul className={classes.listContainer}>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>Improve Your Email Marketing
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>User And Admin Rights Control
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.cross}>&#215;</span>List Building And Cleaning
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.cross}>&#215;</span>Collected Data Management
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.cross}>&#215;</span>More Planning And Evaluation
+                                </li>
+                            </ul>
+                        </Paper>
                     </Grid>
-                </Container>
-            </Fragment>
+                    <Grid item xs>
+                        <Paper className={classes.control}>
+                            <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
+                                Medium
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" gutterBottom>
+                                Very appropriate for the short term
+                            </Typography>
+                            <Divider variant="middle" />
+                            <span className={classes.currency}>$</span>
+                            <span className={classes.value}>299</span>
+                            <Typography variant="body1" color="textSecondary" gutterBottom>monthly</Typography>
+                            <Divider variant="middle" />
+                            <ul className={classes.listContainer}>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>Improve Your Email Marketing
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>User And Admin Rights Control
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>List Building And Cleaning
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>Collected Data Management
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.cross}>&#215;</span>More Planning And Evaluation
+                                </li>
+                            </ul>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs>
+                        <Paper className={classes.control}>
+                            <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
+                                Complete
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" gutterBottom>
+                                Must have for large companies
+                            </Typography>
+                            <Divider variant="middle" />
+                            <span className={classes.currency}>$</span>
+                            <span className={classes.value}>399</span>
+                            <Typography variant="body1" color="textSecondary" gutterBottom>monthly</Typography>
+                            <Divider variant="middle" />
+                            <ul className={classes.listContainer}>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>Improve Your Email Marketing
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>User And Admin Rights Control
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>List Building And Cleaning
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>Collected Data Management
+                                </li>
+                                <li className={classes.list}>
+                                    <span className={classes.tick}>&#10003;</span>More Planning And Evaluation
+                                </li>
+                            </ul>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Container>
         </div>
     );
 }

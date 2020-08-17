@@ -1,10 +1,6 @@
 import React, { Fragment } from 'react';
 import { Typography, Link, Container, Box, Grid, CssBaseline } from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
+import { Facebook, Twitter, LinkedIn, Instagram, Pinterest } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 
 function Copyright() {
@@ -24,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
         listStyle: 'square',
     },
     footer: {
-        borderTop: `1px solid ${theme.palette.divider}`,
         marginTop: theme.spacing(8),
         paddingTop: theme.spacing(6),
         paddingBottom: theme.spacing(6),
@@ -41,7 +36,7 @@ function Footer() {
     return (
         <Fragment>
             <CssBaseline />
-            <Container maxWidth="md" component="footer" className={classes.footer}>
+            <Container maxWidth="md" className={classes.footer}>
                 <Grid container spacing={5} justify="space-evenly">
                     <Grid item xs>
                         <Typography variant="h6" color="textPrimary" gutterBottom>
@@ -64,11 +59,11 @@ function Footer() {
                         <Typography variant="h6" color="textPrimary" gutterBottom>
                             Social Media
                     </Typography>
-                        <FacebookIcon fontSize="large" />
-                        <TwitterIcon fontSize="large" />
-                        <LinkedInIcon fontSize="large" />
-                        <InstagramIcon fontSize="large" />
-                        <PinterestIcon fontSize="large" />
+                        <Facebook fontSize="large" />
+                        <Twitter fontSize="large" />
+                        <LinkedIn fontSize="large" />
+                        <Instagram fontSize="large" />
+                        <Pinterest fontSize="large" />
                     </Grid>
                 </Grid>
                 <Box mt={5}>
