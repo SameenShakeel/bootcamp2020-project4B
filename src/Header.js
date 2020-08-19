@@ -11,23 +11,36 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         height: '800px',
     },
-    textContainer: {
-        maxWidth: "40%",
-        padding: "200px",
-        paddingRight: 0
+    mainContainer: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        paddingRight: '200px',
+        paddingLeft: '200px',
     },
-    text: {
+    textContainer: {
+        flex: '0 0 50%',
+        maxWidth: '40%',
+        marginTop: '200px'
+    },
+    title: {
         font: '700 3rem/3.5rem "Raleway", sans-serif',
         color: '#00bfd8',
     },
-    text1: {
+    subTitle: {
         font: '700 3rem/3.5rem "Raleway", sans-serif',
         color: '#393939'
     },
+    text: {
+        color: '#626262'
+    },
     imageContainer: {
-        position: 'absolute',
-        right:  '15%',
-        top: '20%',
+        flex: '0 0 50%',
+        maxWidth: '50%',
+        marginTop: '100px',
+        marginLeft: '60px',
+    },
+    image: {
+        width: '500px',
     },
     btn: {
         marginTop: "20px",
@@ -43,9 +56,6 @@ const useStyles = makeStyles((theme) => ({
             color: '#00bfd8',
         },
     },
-    image: {
-        width: '500px',
-    }
 }));
 
 function Header() {
@@ -53,14 +63,16 @@ function Header() {
 
     return (
         <div className={classes.root}>
-            <div className={classes.textContainer}>
-                <Typography className={classes.text} variant="h1">Lorem Ipsum</Typography>
-                <Typography className={classes.text1} variant="h3" gutterBottom>dolor sit amet</Typography>
-                <Typography variant="body1">Use Evolo to promote your business startup and generate leads for the offered services</Typography>
-                <Button className={classes.btn} variant="contained" size="large">DISCOVER</Button>
-            </div>
-            <div className={classes.imageContainer}>
-                <img className={classes.image} src="/images/header-teamwork.svg" alt="Teamwork" />
+            <div className={classes.mainContainer}>
+                <div className={classes.textContainer}>
+                    <Typography className={classes.title} variant="h1">Lorem Ipsum</Typography>
+                    <Typography className={classes.subTitle} variant="h3" gutterBottom>dolor sit amet</Typography>
+                    <Typography className={classes.text} variant="body1">Use Evolo to promote your business startup and generate leads for the offered services</Typography>
+                    <Button className={classes.btn} variant="contained" size="large">DISCOVER</Button>
+                </div>
+                <div className={classes.imageContainer}>
+                    <img className={classes.image} src="/images/header-teamwork.svg" alt="Teamwork" />
+                </div>
             </div>
         </div>
     )

@@ -4,13 +4,19 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     slider: {
+        display: 'flex',
+        flexWrap: 'wrap',
         textAlign: 'center',
-        marginBottom: '50px'
+        marginBottom: '100px'
     },
     title: {
+        marginBottom: '0.75rem',
+        textAlign: 'center',
+        width: '100%'
+    },
+    text: {
         font: '700 1.125rem/1.625rem "Raleway", sans-serif',
         color: '#393939',
-        marginBottom: '0.75rem'
     },
     sliderContainer: {
         backgroundColor: '#f7fcfd',
@@ -37,8 +43,8 @@ function Customers() {
 
     return (
         <div className={classes.slider}>
-            <div>
-                <Typography className={classes.title} variant="h5" color="textPrimary" gutterBottom>Trusted By</Typography>
+            <div className={classes.title}>
+                <Typography className={classes.text}variant="h5" color="textPrimary" gutterBottom>Trusted By</Typography>
             </div>
             <div className={classes.sliderContainer}>
                 <div className={classes.sliderwrapper}>
