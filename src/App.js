@@ -6,6 +6,7 @@ import Service from './Service';
 import Detail1 from './Detail1';
 import Detail2 from './Detail2';
 import Pricing from './Pricing';
+import Request from './Request';
 import Footer from "./Footer";
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
       <Detail1 />
       <Detail2 />
       <Pricing />
+      <Request />
       <Footer />
     </div>
   );
