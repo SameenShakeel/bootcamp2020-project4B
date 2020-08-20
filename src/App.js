@@ -1,13 +1,14 @@
 import React from 'react';
-import NavBar from './NavBar';
-import Header from './Header';
-import Customers from './Customers';
-import Service from './Service';
-import Detail1 from './Detail1';
-import Detail2 from './Detail2';
-import Pricing from './Pricing';
-import Request from './Request';
-import Footer from "./Footer";
+import NavBar from './Components/NavBar';
+import Header from './Components/Header';
+import Customers from './Components/Customers';
+import Service from './Components/Service';
+import Detail1 from './Components/Detail1';
+import Detail2 from './Components/Detail2';
+import Pricing from './Components/Pricing';
+import Request from './Components/Request';
+import Testimonials from './Components/Testimonials';
+import Footer from "./Components/Footer";
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Detail2 />
       <Pricing />
       <Request />
+      <Testimonials />
       <Footer />
     </div>
   );

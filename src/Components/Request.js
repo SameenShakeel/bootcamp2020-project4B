@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Button, TextField, FormControl, Select, Checkbox, FormLabel, Link } from '@material-ui/core';
+import { Typography, Button, TextField, Select } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexWrap: 'wrap',
         marginTop: '100px',
-        marginBottom: '100px',
         backgroundColor: '#f9fafc',
         paddingRight: '150px',
         paddingLeft: '250px',
