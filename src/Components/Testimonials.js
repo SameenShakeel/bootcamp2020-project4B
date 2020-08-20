@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         position: 'relative',
         minHeight: '100%',
+        height: 'auto'
     },
     mainContainer: {
         display: 'flex',
@@ -52,7 +53,7 @@ function Testimonials() {
                     <Typography className={classes.title} variant="h2">Testimonials</Typography>
                     <div className={classes.sliderContainer}>
                         <div className={classes.testimonials}>
-
+                            <Paper></Paper>
                         </div>
                         <IconButton className={classes.btn} size="medium">
                             <ArrowBackIosIcon />
