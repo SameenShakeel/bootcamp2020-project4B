@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
             paddingTop: theme.spacing(6),
             paddingBottom: theme.spacing(6),
         }
+    },
+    icon: {
+        color: '#00bfd8'
     }
 }));
 
@@ -59,11 +62,11 @@ function Footer() {
                         <Typography variant="h6" color="textPrimary" gutterBottom>
                             Social Media
                     </Typography>
-                        <Facebook fontSize="large" />
-                        <Twitter fontSize="large" />
-                        <LinkedIn fontSize="large" />
-                        <Instagram fontSize="large" />
-                        <Pinterest fontSize="large" />
+                        <Facebook className={classes.icon} fontSize="large" />
+                        <Twitter className={classes.icon} fontSize="large" />
+                        <LinkedIn className={classes.icon} fontSize="large" />
+                        <Instagram className={classes.icon} fontSize="large" />
+                        <Pinterest className={classes.icon} fontSize="large" />
                     </Grid>
                 </Grid>
                 <Box mt={5}>

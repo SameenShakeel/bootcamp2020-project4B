@@ -29,7 +29,10 @@ const useStyles = makeStyles((theme) => ({
     control: {
         padding: theme.spacing(2),
         textAlign: 'center',
-        maxHeight: '100%',
+        height: '510px',
+        '&:hover': {
+            boxShadow: '5px 10px 18px #888888'
+        }
     },
     container: {
         flex: '0 0 100%',
@@ -88,7 +91,7 @@ function Pricing() {
                 </div>
                 <Grid container spacing={5} justify="space-evenly">
                     <Grid item xs>
-                        <Paper className={classes.control}>
+                        <Paper className={classes.control} elevation={3}>
                             <div className={classes.mainBody}>
                                 <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
                                     Starter
@@ -124,7 +127,7 @@ function Pricing() {
                         </Paper>
                     </Grid>
                     <Grid item xs>
-                        <Paper className={classes.control}>
+                        <Paper className={classes.control} elevation={3}>
                             <div className={classes.mainBody}>
                                 <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
                                     Medium
@@ -160,7 +163,7 @@ function Pricing() {
                         </Paper>
                     </Grid>
                     <Grid item xs>
-                        <Paper className={classes.control}>
+                        <Paper className={classes.control} elevation={3}>
                             <div className={classes.mainBody}>
                                 <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
                                     Complete

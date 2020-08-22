@@ -14,8 +14,9 @@ const useStyles = makeStyles((theme) => ({
     mainContainer: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingRight: '200px',
-        paddingLeft: '200px',
+        paddingRight: '150px',
+        paddingLeft: '150px',
+        justifyContent: 'space-around',
     },
     textContainer: {
         flex: '0 0 50%',

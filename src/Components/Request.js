@@ -9,15 +9,15 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '100px',
         backgroundColor: '#f9fafc',
         paddingRight: '150px',
-        paddingLeft: '250px',
+        paddingLeft: '150px',
         paddingTop: '100px',
         paddingBottom: '100px',
+        justifyContent: 'space-around',
 
     },
     textContainer: {
         flex: '0 0 50%',
         maxWidth: '40%',
-        marginRight: '50px'
     },
     title: {
         font: '700 2.25rem/2.75rem "Raleway", sans-serif',
@@ -114,13 +114,13 @@ function Request() {
                             label="Phone"
                             variant="outlined"
                         />
-                        <Select native variant="outlined" className={classes.selectEmpty}>
-                            <option value="" disabled selected>
+                        <Select native variant="outlined" defaultValue="Interested In..." className={classes.selectEmpty}>
+                            <option value="Interested In..." disabled>
                                 Interested In...
                             </option>
-                            <option value="">Starter</option>
-                            <option value="">Medium</option>
-                            <option value="">Complete</option>
+                            <option value="Starter">Starter</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Complete">Complete</option>
                         </Select>
                         <Button className={classes.btn} variant="contained" size="large">REQUEST</Button>
                 </div>

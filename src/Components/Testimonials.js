@@ -1,7 +1,5 @@
 import React from 'react';
-import { Typography, Paper, IconButton, Grid } from '@material-ui/core';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { Typography, Paper, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
     mainContainer: {
         display: 'flex',
         flexWrap: 'wrap',
+        paddingRight: '100px',
+        paddingLeft: '100px',
+        paddingTop: '7.5rem',
+        paddingBottom: '7.5rem',
+        justifyContent: 'space-around',
     },
     leftContainer: {
         flex: '0 0 50%',
@@ -32,24 +35,25 @@ const useStyles = makeStyles((theme) => ({
     rightContainer: {
         flex: '0 0 50%',
         maxWidth: '50%',
-        textAlign: 'center'
+        textAlign: 'center',
     },
     title: {
         color: '#393939',
-        font: '700 2.25rem/2.75rem "Raleway", sans-serif'
-    },
-    btn: {
-        backgroundColor: 'transparent',
-        color: 'black',
+        font: '700 2.25rem/2.75rem "Raleway", sans-serif',
+        marginBottom: '2.5rem'
     },
     paper: {
-        padding: theme.spacing(1),
-        textAlign: 'center',
+        padding: theme.spacing(2),
+        margin: 'auto',
+        maxWidth: 500,
         backgroundColor: 'transparent',
+        textAlign: 'left',
+        marginBottom: '15px',
     },
     testimonial: {
         width: '7rem',
         height: '7rem',
+        marginRight: '20px',
         borderRadius: '50%',
     },
     testimonialText: {
@@ -68,40 +72,6 @@ const useStyles = makeStyles((theme) => ({
 function Testimonials() {
     const classes = useStyles();
 
-    function FormRow() {
-        return (
-            <React.Fragment>
-                <Grid item xs={4}>
-                    <Paper className={classes.paper} elevation={0}>
-                        <img className={classes.testimonial}src="/images/testimonial-1.svg" alt="testimonial" />
-                        <Typography className={classes.testimonialText} variant="body1">
-                            I just finished my trial period and was so amazed with the support and results that I purchased Evolo right away at the special price.
-                        </Typography>
-                        <Typography className={classes.testimonialAuthor} variant="body1">Jude Thorn - Designer</Typography>
-                    </Paper>
-                </Grid>
-                <Grid item xs={4}>
-                    <Paper className={classes.paper} elevation={0}>
-                        <img className={classes.testimonial} src="/images/testimonial-2.svg" alt="testimonial" />
-                        <Typography className={classes.testimonialText} variant="body1">
-                            Evolo has always helped or startup to position itself in the highly competitive market of mobile applications. You will not regret using it!
-                        </Typography>
-                        <Typography className={classes.testimonialAuthor} variant="body1">Jude Thorn - Designer</Typography>
-                    </Paper>
-                </Grid>
-                <Grid item xs={4}>
-                    <Paper className={classes.paper} elevation={0}>
-                        <img className={classes.testimonial} src="/images/testimonial-3.svg" alt="testimonial" />
-                        <Typography className={classes.testimonialText} variant="body1">
-                            Evolo has always helped or startup to position itself in the highly competitive market of mobile applications. You will not regret using it!
-                        </Typography>
-                        <Typography className={classes.testimonialAuthor} variant="body1">Jude Thorn - Designer</Typography>
-                    </Paper>
-                </Grid>
-            </React.Fragment>
-        );
-    }
-
     return (
         <div className={classes.root}>
             <div className={classes.mainContainer}>
@@ -110,21 +80,56 @@ function Testimonials() {
                 </div>
                 <div className={classes.rightContainer}>
                     <Typography className={classes.title} variant="h2">Testimonials</Typography>
-                    <div className={classes.sliderContainer}>
-                        <div className={classes.testimonials}>
-                            <Grid container spacing={1}>
-                                <Grid container item xs={12} spacing={3}>
-                                    <FormRow />
+                    <Paper className={classes.paper}>
+                        <Grid container spacing={2}>
+                            <Grid item>
+                                <img className={classes.testimonial} alt="complex" src="/images/testimonial-1.svg" />
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                    <Grid item xs>
+                                        <Typography className={classes.testimonialText} variant="body1">
+                                            I just finished my trial period and was so amazed with the support and results that I purchased Evolo right away at the special price.
+                                        </Typography>
+                                        <Typography className={classes.testimonialAuthor} variant="body1">Jude Thorn - Designer</Typography>
+                                    </Grid>
                                 </Grid>
                             </Grid>
-                        </div>
-                        <IconButton className={classes.btn} size="medium">
-                            <ArrowBackIosIcon />
-                        </IconButton>
-                        <IconButton className={classes.btn} size="medium">
-                            <ArrowForwardIosIcon />
-                        </IconButton>
-                    </div>
+                        </Grid>
+                    </Paper>
+                    <Paper className={classes.paper}>
+                        <Grid container spacing={2}>
+                            <Grid item>
+                                <img className={classes.testimonial} src="/images/testimonial-2.svg" alt="testimonial" />                            </Grid>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                    <Grid item xs>
+                                        <Typography className={classes.testimonialText} variant="body1">
+                                            Evolo has always helped or startup to position itself in the highly competitive market of mobile applications. You will not regret using it!
+                                        </Typography>
+                                        <Typography className={classes.testimonialAuthor} variant="body1">Jude Thorn - Designer</Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Paper>
+                    <Paper className={classes.paper}>
+                        <Grid container spacing={2}>
+                            <Grid item>
+                                <img className={classes.testimonial} alt="complex" src="/images/testimonial-3.svg" />
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                    <Grid item xs>
+                                        <Typography className={classes.testimonialText} variant="body1">
+                                            Love their services and was so amazed with the support and results that I purchased Evolo for two years in a row. They are awesome.
+                                        </Typography>
+                                        <Typography className={classes.testimonialAuthor} variant="body1">Roy Smith - Marketer</Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Paper>
                 </div>
             </div>
         </div>

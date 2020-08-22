@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     control: {
         padding: theme.spacing(2),
         textAlign: 'center',
-        maxHeight: '100%',
+        height: '320px'
     },
     img: {
         width: '6rem',
@@ -56,7 +56,7 @@ function Service() {
                 </div>
                 <Grid container spacing={5} justify="space-evenly">
                     <Grid item xs>
-                        <Paper className={classes.control}>
+                        <Paper className={classes.control} elevation={3}>
                             <img className={classes.img} src="/images/services-icon-1.svg" alt="service" />
                             <Typography className={classes.subTitle} variant="h4" color="textPrimary" gutterBottom>
                                 Market Analysis
@@ -67,7 +67,7 @@ function Service() {
                         </Paper>
                     </Grid>
                     <Grid item xs>
-                        <Paper className={classes.control}>
+                        <Paper className={classes.control} elevation={3}>
                             <img className={classes.img} src="/images/services-icon-2.svg" alt="service" />
                             <Typography className={classes.subTitle} variant="h4" color="textPrimary" gutterBottom>
                                 Opportunity Scan
@@ -78,7 +78,7 @@ function Service() {
                         </Paper>
                     </Grid>
                     <Grid item xs>
-                        <Paper className={classes.control}>
+                        <Paper className={classes.control} elevation={3}>
                             <img className={classes.img} src="/images/services-icon-3.svg" alt="service" />
                             <Typography className={classes.subTitle} variant="h4" color="textPrimary" gutterBottom>
                                 Action Plan

@@ -6,17 +6,15 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingRight: '200px',
-        paddingLeft: '200px',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: '100px',
-        marginBottom: '100px'
+        paddingRight: '100px',
+        paddingLeft: '150px',
+        marginTop: '150px',
+        marginBottom: '100px',
+        justifyContent: 'space-around'
     },
     imageContainer: {
         flex: '0 0 50%',
         maxWidth: '50%',
-        marginRight: '50px'
     },
     image: {
         width: '550px',

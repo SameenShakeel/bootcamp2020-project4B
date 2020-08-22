@@ -6,16 +6,16 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingRight: '200px',
-        paddingLeft: '200px',
+        paddingRight: '150px',
+        paddingLeft: '150px',
         marginTop: '100px',
-        marginBottom: '100px'
+        marginBottom: '100px',
+        justifyContent: 'space-around'
     },
     textContainer: {
         flex: '0 0 50%',
         maxWidth: '40%',
         marginTop: '40px',
-        marginRight: '50px'
     },
     title: {
         color: '#393939',
