@@ -6,29 +6,29 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingRight: '150px',
-        paddingLeft: '150px',
-        marginTop: '100px',
-        marginBottom: '100px',
+        paddingRight: '9.375rem',
+        paddingLeft: '9.375rem',
+        marginTop: '6.25rem',
+        marginBottom: '6.25rem',
         justifyContent: 'space-around'
     },
     textContainer: {
         flex: '0 0 50%',
         maxWidth: '40%',
-        marginTop: '40px',
+        marginTop: '2.5rem',
     },
     title: {
         color: '#393939',
         font: '700 2.25rem/2.75rem "Raleway", sans-serif',
     },
     btn: {
-        marginTop: "20px",
-        borderRadius: "25px",
+        marginTop: "1.25rem",
+        borderRadius: "1.5625rem",
         backgroundColor: '#00bfd8',
         border: '0.125rem solid #00bfd8',
         color: "white",
-        width: '150px',
-        height: '50px',
+        width: '9.375rem',
+        height: '3.125rem',
         fontSize: '0.8rem',
         '&:hover': {
             backgroundColor: 'white',
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '50%',
     },
     image: {
-        width: '550px',
+        width: '34.375rem',
     }
 }));
 

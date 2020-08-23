@@ -10,17 +10,15 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         position: 'relative',
         minHeight: '100%',
-        height: 'auto',
-        marginTop: '200px',
-        marginBottom: '200px',
-        marginLeft: 'auto',
-        marginRight: 'auto',
+        height: '100%',
+        marginTop: '12.5rem',
+        marginBottom: '12.5rem',
     },
     mainContainer: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingRight: '100px',
-        paddingLeft: '100px',
+        paddingRight: '6.25rem',
+        paddingLeft: '6.25rem',
         paddingTop: '7.5rem',
         paddingBottom: '7.5rem',
         justifyContent: 'space-around',
@@ -30,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '50%',
     },
     img: {
-        width: '550px'
+        width: '34.375rem'
     },
     rightContainer: {
         flex: '0 0 50%',
@@ -48,12 +46,12 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 500,
         backgroundColor: 'transparent',
         textAlign: 'left',
-        marginBottom: '15px',
+        marginBottom: '0.9375rem',
     },
     testimonial: {
         width: '7rem',
         height: '7rem',
-        marginRight: '20px',
+        marginRight: '1.25rem',
         borderRadius: '50%',
     },
     testimonialText: {
@@ -80,7 +78,7 @@ function Testimonials() {
                 </div>
                 <div className={classes.rightContainer}>
                     <Typography className={classes.title} variant="h2">Testimonials</Typography>
-                    <Paper className={classes.paper}>
+                    <Paper className={classes.paper} elevation={2}>
                         <Grid container spacing={2}>
                             <Grid item>
                                 <img className={classes.testimonial} alt="complex" src="/images/testimonial-1.svg" />
@@ -97,7 +95,7 @@ function Testimonials() {
                             </Grid>
                         </Grid>
                     </Paper>
-                    <Paper className={classes.paper}>
+                    <Paper className={classes.paper} elevation={2}>
                         <Grid container spacing={2}>
                             <Grid item>
                                 <img className={classes.testimonial} src="/images/testimonial-2.svg" alt="testimonial" />                            </Grid>
@@ -113,7 +111,7 @@ function Testimonials() {
                             </Grid>
                         </Grid>
                     </Paper>
-                    <Paper className={classes.paper}>
+                    <Paper className={classes.paper} elevation={2}>
                         <Grid container spacing={2}>
                             <Grid item>
                                 <img className={classes.testimonial} alt="complex" src="/images/testimonial-3.svg" />

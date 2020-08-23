@@ -6,10 +6,10 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingRight: '100px',
-        paddingLeft: '150px',
-        marginTop: '150px',
-        marginBottom: '100px',
+        paddingRight: '6.25rem',
+        paddingLeft: '9.375rem',
+        marginTop: '9.375rem',
+        marginBottom: '6.25rem',
         justifyContent: 'space-around'
     },
     imageContainer: {
@@ -17,12 +17,12 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '50%',
     },
     image: {
-        width: '550px',
+        width: '34.375rem',
     },
     textContainer: {
         flex: '0 0 50%',
         maxWidth: '40%',
-        marginTop: '40px'
+        marginTop: '2.5rem'
     },
     title: {
         color: '#393939',
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '700',
         fontSize: '1.2rem',
         color: '#00bfd8',
-        marginRight: '6px'
+        marginRight: '0.375rem'
     },
     listContainer: {
         textAlign: 'left',
@@ -41,13 +41,13 @@ const useStyles = makeStyles((theme) => ({
         color: '#626262'
     },
     btn: {
-        marginTop: "20px",
-        borderRadius: "25px",
+        marginTop: "1.25rem",
+        borderRadius: "1.5625rem",
         backgroundColor: '#00bfd8',
         border: '0.125rem solid #00bfd8',
         color: "white",
-        width: '150px',
-        height: '50px',
+        width: '9.375rem',
+        height: '3.125rem',
         fontSize: '0.8rem',
         '&:hover': {
             backgroundColor: 'white',

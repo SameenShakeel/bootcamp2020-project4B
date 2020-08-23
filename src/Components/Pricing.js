@@ -7,14 +7,14 @@ const useStyles = makeStyles((theme) => ({
     pricing: {
         display: 'flex',
         flexWrap: 'wrap',
-        marginTop: '100px',
-        marginBottom: '100px'
+        marginTop: '6.25rem',
+        marginBottom: '6.25rem'
     },
     title: {
         font: '700 2.25rem/2.75rem "Raleway", sans-serif',
         color: '#393939',
         textAlign: 'center',
-        marginTop: '10px'
+        marginTop: '0.625rem'
     },
     text: {
         width: '65%',
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     control: {
         padding: theme.spacing(2),
         textAlign: 'center',
-        height: '510px',
+        height: '31.875rem',
         '&:hover': {
             boxShadow: '5px 10px 18px #888888'
         }
@@ -59,14 +59,14 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '200',
         fontSize: '1.5rem',
         color: '#777b7e',
-        marginRight: '6px',
+        marginRight: '0.375rem',
         lineHeight: '1.5rem',
     },
     tick: {
         fontWeight: '700',
         fontSize: '1.2rem',
         color: '#00bfd8',
-        marginRight: '6px'
+        marginRight: '0.375rem'
     },
     listContainer: {
         textAlign: 'left',

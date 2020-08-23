@@ -4,24 +4,24 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: '80px',
+        marginTop: '5rem',
         backgroundImage: `url(${'/images/header-background.jpg'})`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         position: 'relative',
-        height: '800px',
+        height: '50rem',
     },
     mainContainer: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingRight: '150px',
-        paddingLeft: '150px',
+        paddingRight: '9.375rem',
+        paddingLeft: '9.375rem',
         justifyContent: 'space-around',
     },
     textContainer: {
         flex: '0 0 50%',
         maxWidth: '40%',
-        marginTop: '200px'
+        marginTop: '12.5rem'
     },
     title: {
         font: '700 3rem/3.5rem "Raleway", sans-serif',
@@ -37,20 +37,19 @@ const useStyles = makeStyles((theme) => ({
     imageContainer: {
         flex: '0 0 50%',
         maxWidth: '50%',
-        marginTop: '100px',
-        marginLeft: '60px',
+        marginTop: '6.25rem',
     },
     image: {
-        width: '500px',
+        width: '31.25rem',
     },
     btn: {
-        marginTop: "20px",
-        borderRadius: "25px",
+        marginTop: "1.25rem",
+        borderRadius: "1.5625rem",
         backgroundColor: '#00bfd8',
         border: '0.125rem solid #00bfd8',
         color: "white",
-        width: '150px',
-        height: '50px',
+        width: '9.375rem',
+        height: '3.125rem',
         fontSize: '0.8rem',
         '&:hover': {
             backgroundColor: 'white',

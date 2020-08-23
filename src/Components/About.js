@@ -7,8 +7,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        marginTop: '100px',
-        marginBottom: '100px',
+        marginTop: '6.25rem',
+        marginBottom: '6.25rem',
         textAlign: 'center',
         justifyContent: 'space-around'
     },

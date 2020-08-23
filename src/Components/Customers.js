@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexWrap: 'wrap',
         textAlign: 'center',
-        marginBottom: '100px'
+        marginBottom: '6.25rem'
     },
     title: {
         marginBottom: '0.75rem',
@@ -23,18 +23,18 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '2.75rem',
         paddingTop: '2.75rem',
         borderRadius: '0.5rem',
-        maxWidth: '950px',
+        maxWidth: '59.375rem',
         margin: 'auto',
     },
     sliderwrapper: {
-        height: '30px',
+        height: '1.875rem',
         position: 'relative',
         overflow: 'hidden',
         margin: '0 auto',
     },
     img: {
         verticalAlign: 'middle',
-        marginRight: '20px'
+        marginRight: '1.25rem'
     }
 }));
 

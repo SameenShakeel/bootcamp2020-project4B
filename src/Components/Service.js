@@ -6,8 +6,8 @@ const useStyles = makeStyles((theme) => ({
     services: {
         display: 'flex',
         flexWrap: 'wrap',
-        marginTop: '100px',
-        marginBottom: '100px'
+        marginTop: '6.25rem',
+        marginBottom: '6.25rem'
     },
     container: {
         flex: '0 0 100%',
