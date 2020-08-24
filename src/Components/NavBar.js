@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { useScrollTrigger, AppBar, CssBaseline, Toolbar,Link } from '@material-ui/core';
+import { useScrollTrigger, AppBar, CssBaseline, Toolbar, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -55,7 +55,7 @@ function NavBar(props) {
             <ElevationScroll {...props}>
                 <AppBar className={classes.appBar}>
                     <Toolbar className={classes.toolbar}>
-                        <div className={classes.logo}>
+                        <div className={classes.logo} ref={logo}>
                             <Link variant="button" color="textPrimary" href="index.html">
                                 <img className={classes.icon} src="/images/logo.svg" alt="Logo" />
                             </Link>
@@ -63,22 +63,22 @@ function NavBar(props) {
                         <nav>
                             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                                 Home
-                        </Link>
+                            </Link>
                             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                                 Services
-                         </Link>
+                            </Link>
                             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                                 Pricing
-                        </Link>
+                            </Link>
                             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                                 Request
-                        </Link>
+                            </Link>
                             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                                 About
-                        </Link>
+                            </Link>
                             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                                 Contact
-                        </Link>
+                            </Link>
                         </nav>
                     </Toolbar>
                 </AppBar>
