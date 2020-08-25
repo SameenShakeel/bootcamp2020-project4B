@@ -1,6 +1,10 @@
 import React from 'react';
 import { Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({easing: 'ease-out-back'});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -64,13 +68,13 @@ function Header() {
     return (
         <div className={classes.root}>
             <div className={classes.mainContainer}>
-                <div className={classes.textContainer}>
+                <div className={classes.textContainer} data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
                     <Typography className={classes.title} variant="h1">Lorem Ipsum</Typography>
                     <Typography className={classes.subTitle} variant="h3" gutterBottom>dolor sit amet</Typography>
                     <Typography className={classes.text} variant="body1">Use Evolo to promote your business startup and generate leads for the offered services</Typography>
                     <Button className={classes.btn} variant="contained" size="large">DISCOVER</Button>
                 </div>
-                <div className={classes.imageContainer}>
+                <div className={classes.imageContainer} data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">
                     <img className={classes.image} src="/images/header-teamwork.svg" alt="Teamwork" />
                 </div>
             </div>

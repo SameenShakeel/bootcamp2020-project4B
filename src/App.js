@@ -14,22 +14,23 @@ import Footer from "./Components/Footer";
 import './App.css';
 
 function App() {
-  return (
-    <>
-      <NavBar />
-      <Header />
-      <Customers />
-      <Service />
-      <Detail1 />
-      <Detail2 />
-      <Pricing />
-      <Request />
-      <Testimonials />
-      <About />
-      <Contact />
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <NavBar />
+            <Header />
+            <Customers />
+            <Service />
+            <Detail1 />
+            <Detail2 />
+            <Pricing />
+            <Request />
+            <Testimonials />
+            <About />
+            <Contact />
+            <Footer />
+        </>
+    );
 }
 
 export default App;
+

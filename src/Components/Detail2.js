@@ -1,6 +1,10 @@
 import React from 'react';
 import { Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({easing: 'ease-out-back'});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -61,11 +65,11 @@ function Detail2() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-            <div className={classes.imageContainer}>
+        <div className={classes.root} data-aos="fade-in" data-aos-delay="600" data-aos-duration="1000">
+            <div className={classes.imageContainer} data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000">
                 <img className={classes.image} src="/images/details-2-office-team-work.svg" alt="Teamwork" />
             </div>
-            <div className={classes.textContainer}>
+            <div className={classes.textContainer} data-aos="fade-left" data-aos-delay="1200" data-aos-duration="2000">
                 <Typography className={classes.title} variant="h2" gutterBottom>Search For Optimization Wherever Is Possible</Typography>
                 <ul className={classes.listContainer}>
                     <li>

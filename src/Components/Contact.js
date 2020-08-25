@@ -4,6 +4,10 @@ import RoomIcon from '@material-ui/icons/Room';
 import PhoneEnabledIcon from '@material-ui/icons/PhoneEnabled';
 import MailIcon from '@material-ui/icons/Mail';
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({easing: 'ease-out-back'});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -84,8 +88,8 @@ function Contact() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-            <div className={classes.container}>
+        <div className={classes.root} data-aos="fade-in" data-aos-delay="1000" data-aos-duration="1000">
+            <div className={classes.container} data-aos="zoom-out" data-aos-delay="1300" data-aos-duration="2000">
                 <Typography className={classes.title} variant="h2">Contact Information</Typography>
                 <ul className={classes.listContainer}>
                     <li>
@@ -104,10 +108,10 @@ function Contact() {
                     </li>
                 </ul>
             </div>
-            <div className={classes.imageContainer}>
+            <div className={classes.imageContainer} data-aos="fade-right" data-aos-delay="1600" data-aos-duration="2000">
                 <img className={classes.image} src="/images/mail-letter.png" alt="letter" />
             </div>
-            <div className={classes.form}>
+            <div className={classes.form} data-aos="fade-left" data-aos-delay="1900" data-aos-duration="2000">
                 <TextField
                     className={classes.textfield}
                     label="Name"

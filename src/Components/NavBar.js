@@ -55,7 +55,7 @@ function NavBar(props) {
             <ElevationScroll {...props}>
                 <AppBar className={classes.appBar}>
                     <Toolbar className={classes.toolbar}>
-                        <div className={classes.logo} ref={logo}>
+                        <div className={classes.logo}>
                             <Link variant="button" color="textPrimary" href="index.html">
                                 <img className={classes.icon} src="/images/logo.svg" alt="Logo" />
                             </Link>

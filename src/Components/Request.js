@@ -1,6 +1,10 @@
 import React from 'react';
 import { Typography, Button, TextField, Select } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({easing: 'ease-out-back'});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -76,8 +80,8 @@ function Request() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-                <div className={classes.textContainer}>
+        <div className={classes.root} data-aos="fade-in" data-aos-delay="700" data-aos-duration="1000">
+                <div className={classes.textContainer} data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">
                     <Typography className={classes.title} variant="h2" gutterBottom>Fill The Following Form To Request A Meeting</Typography>
                     <Typography className={classes.text} variant="body1" color="textSecondary" gutterBottom>Evolo is one of the easiest and feature packed marketing automation apps in the market. Discover what it can do for your business organization right away.</Typography>
                     <ul className={classes.listContainer}>
@@ -98,7 +102,7 @@ function Request() {
                         </li>
                     </ul>
                 </div>
-                <div className={classes.form}>
+                <div className={classes.form} data-aos="fade-left" data-aos-delay="1200" data-aos-duration="2000">
                         <TextField
                             className={classes.textfield}
                             label="Full Name"

@@ -1,6 +1,10 @@
 import React from 'react';
 import { Typography, Paper, Grid, Divider, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({easing: 'ease-out-back'});
 
 
 const useStyles = makeStyles((theme) => ({
@@ -83,15 +87,15 @@ function Pricing() {
     const classes = useStyles();
 
     return (
-        <div className={classes.pricing}>
+        <div className={classes.pricing} data-aos="fade-in" data-aos-delay="600" data-aos-duration="1000">
             <Container maxWidth="md">
-                <div className={classes.container}>
+                <div className={classes.container} data-aos="zoom-out" data-aos-delay="900" data-aos-duration="2000">
                     <Typography className={classes.title} variant="h2" color="textPrimary" gutterBottom>Multiple Pricing Options</Typography>
                     <Typography className={classes.text} variant='body1' color="textSecondary" gutterBottom>We've prepared pricing plans for all budgets so you can get started right away. They're great for small companies and large organizations</Typography>
                 </div>
                 <Grid container spacing={5} justify="space-evenly">
                     <Grid item xs>
-                        <Paper className={classes.control} elevation={3}>
+                        <Paper className={classes.control} elevation={3} data-aos="zoom-out-up" data-aos-delay="1400" data-aos-duration="2000">
                             <div className={classes.mainBody}>
                                 <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
                                     Starter
@@ -127,7 +131,7 @@ function Pricing() {
                         </Paper>
                     </Grid>
                     <Grid item xs>
-                        <Paper className={classes.control} elevation={3}>
+                        <Paper className={classes.control} elevation={3} data-aos="zoom-out-up" data-aos-delay="1900" data-aos-duration="2000">
                             <div className={classes.mainBody}>
                                 <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
                                     Medium
@@ -163,7 +167,7 @@ function Pricing() {
                         </Paper>
                     </Grid>
                     <Grid item xs>
-                        <Paper className={classes.control} elevation={3}>
+                        <Paper className={classes.control} elevation={3} data-aos="zoom-out-up" data-aos-delay="2400" data-aos-duration="2000">
                             <div className={classes.mainBody}>
                                 <Typography className={classes.title} variant="h1" color="textPrimary" gutterBottom>
                                     Complete

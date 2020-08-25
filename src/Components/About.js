@@ -2,6 +2,10 @@ import React from 'react';
 import { Typography, Paper } from '@material-ui/core';
 import { Facebook, Twitter } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({easing: 'ease-out-back'});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -62,15 +66,15 @@ function About() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-            <div className={classes.textContainer}>
+        <div className={classes.root} data-aos="fade-in" data-aos-delay="900" data-aos-duration="1000">
+            <div className={classes.textContainer} data-aos="zoom-out" data-aos-delay="1200" data-aos-duration="2000">
                 <Typography className={classes.title} variant="h2" gutterBottom>About The Team</Typography>
                 <Typography className={classes.text} variant="body1" color="textSecondary">
                     Meat our team of specialized marketers and business developers which will help you research new products and launch them in new emerging markets
                 </Typography>
             </div>
             <div className={classes.teamContainer}>
-                <Paper className={classes.paper} elevation={0}>
+                <Paper className={classes.paper} elevation={0} data-aos="zoom-out-up" data-aos-delay="1500" data-aos-duration="2000">
                     <img className={classes.img} src="/images/team-member-1.svg" alt="team member" />
                     <Typography className={classes.name} variant="body1">
                         <strong>Lacy Whitelong</strong>
@@ -79,7 +83,7 @@ function About() {
                     <Facebook className={classes.icon}/>
                     <Twitter className={classes.icon}/>
                 </Paper>
-                <Paper className={classes.paper} elevation={0}>
+                <Paper className={classes.paper} elevation={0} data-aos="zoom-out-up" data-aos-delay="1900" data-aos-duration="2000">
                     <img className={classes.img} src="/images/team-member-2.svg" alt="team member" />
                     <Typography className={classes.name} variant="body1">
                         <strong>Chris Brown</strong>
@@ -88,7 +92,7 @@ function About() {
                     <Facebook className={classes.icon}/>
                     <Twitter className={classes.icon} />
                 </Paper>
-                <Paper className={classes.paper} elevation={0}>
+                <Paper className={classes.paper} elevation={0} data-aos="zoom-out-up" data-aos-delay="2300" data-aos-duration="2000">
                     <img className={classes.img} src="/images/team-member-3.svg" alt="team member" />
                     <Typography className={classes.name} variant="body1">
                         <strong>Sheila Zimerman</strong>
@@ -97,7 +101,7 @@ function About() {
                     <Facebook className={classes.icon}/>
                     <Twitter className={classes.icon} />
                 </Paper>
-                <Paper className={classes.paper} elevation={0}>
+                <Paper className={classes.paper} elevation={0} data-aos="zoom-out-up" data-aos-delay="2500" data-aos-duration="2000">
                     <img className={classes.img} src="/images/team-member-4.svg" alt="team member" />
                     <Typography className={classes.name} variant="body1">
                         <strong>Mary Villalonga</strong>

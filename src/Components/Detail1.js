@@ -1,6 +1,10 @@
 import React from 'react';
 import { Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({easing: 'ease-out-back'});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -8,9 +12,10 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         paddingRight: '9.375rem',
         paddingLeft: '9.375rem',
-        marginTop: '6.25rem',
+        marginTop: '8.25rem',
         marginBottom: '6.25rem',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        overflow: 'hidden'
     },
     textContainer: {
         flex: '0 0 50%',
@@ -49,13 +54,13 @@ function Detail1() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-            <div className={classes.textContainer}>
+        <div className={classes.root} data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+            <div className={classes.textContainer} data-aos="fade-right" data-aos-delay="800" data-aos-duration="2000">
                 <Typography className={classes.title} variant="h2" gutterBottom>Design And Plan Your Business Growth Steps</Typography>
                 <Typography variant="body1" color="textSecondary" gutterBottom>Use our staff and our expertise to design and plan your business growth strategy. Evolo team is eager to advise you on the best opportunities that you should look into</Typography>
                 <Button className={classes.btn} variant="contained" size="large">LIGHTBOX</Button>
             </div>
-            <div className={classes.imageContainer}>
+            <div className={classes.imageContainer} data-aos="fade-left" data-aos-delay="1100" data-aos-duration="2000">
                 <img className={classes.image} src="/images/details-1-office-worker.svg" alt="Teamwork" />
             </div>
         </div>
